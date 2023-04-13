@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- spawn husky -->
+    <include file="$(find offboard_py)/launch/spawn_husky.launch">
+    </include>
+	
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+		 <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/default.world"/>
+	</include>
+
+	<!-- Our node to control  drone -->
+	<node pkg="offboard_py" type="offb_node.py" name="offb_node_py" required="true" output="screen" />
+</launch>
