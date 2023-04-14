@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # control drone using wasd852 , control husky using uhjkn
 
