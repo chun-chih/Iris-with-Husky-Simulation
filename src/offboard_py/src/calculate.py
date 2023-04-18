@@ -18,7 +18,7 @@ def exp(x):
 
 def backupcontroller(x, y, z, hx, hy, hz, hvx, hvy, cb, beta, dvx, dvy, dvz, bv, b0v):
     distance = ((x - hx) ** 2 + (y - hy) ** 2 + (z - hz) ** 2) ** 0.5
-    h0 = cb ** 2 - (x - hx) ** 2 - (y - hy) ** 2 - (z - hz) ** 2
+    h0 = cb ** 2 - (x - hx) ** 2 - (y - hy) ** 2 - (z - hz) ** 2 - 0.25
     lambda0 = 1 - exp(-1 * beta * max(h0, 0))
 
     if dvx > 0 and x - hx >= 0:
